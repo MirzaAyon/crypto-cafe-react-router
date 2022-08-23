@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import CoinCard from '../CoinCard/CoinCard';
 
 const Coins = () => {
     const [coins, setCoins] = useState([]);
@@ -15,11 +16,15 @@ const Coins = () => {
         //perpage =50 ke 100 banae dbo tokhn 100 ta data load hbe 
     }, [])
     return (
-        <div>
-            <h2>Coins are here </h2>
-            <h3>Coins : {coins.length}</h3>
+        <div className='px-4 pt-20 pb-24 mx-auto max-w-7xl'>
+            {/* <h2>Coins are here </h2>
+            <h3>Coins : {coins.length}</h3> */}
             {
-                coins.map(coin => <p> {coin.name} </p>)
+                coins.map(coin =>
+                    // <p> {coin.name} </p>
+                    <CoinCard key={coin.id} coin={coin}></CoinCard>
+                    // atr er maddhome pathae dilam okhane props diye dhorbo
+                )
             }
         </div>
     );
