@@ -16,9 +16,10 @@ const Coins = () => {
         //perpage =50 ke 100 banae dbo tokhn 100 ta data load hbe 
     }, [])
     return (
-        <div className='px-4 pt-20 pb-24 mx-auto max-w-7xl'>
+        <div className='px-4 pt-20 pb-24 mx-auto max-w-7xl md:px-2'>
             {/* <h2>Coins are here </h2>
             <h3>Coins : {coins.length}</h3> */}
+            <p className='text-center text-3xl font-bold text-gray'>Available Crypto Currencies</p>
             {
                 coins.map(coin =>
                     // <p> {coin.name} </p>
