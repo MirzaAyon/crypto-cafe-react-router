@@ -17,6 +17,7 @@ const CoinCard = ({ coin }) => {
                                 src={coin.image}
                                 className='mx-auto object-cover rounded-full h-16 w-16 '
                             />
+                            {/* object-cover dile full container ta cover hye jabe  */}
                         </div>
 
 

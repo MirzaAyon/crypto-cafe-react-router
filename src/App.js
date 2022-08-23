@@ -4,6 +4,7 @@ import Header from './components/Header/Header'
 import Homepage from './components/Homepage/Homepage'
 import Coins from './components/Coins/Coins'
 import Contact from './components/Contact/Contact'
+import Footer from './components/Footer/Footer'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path='/coins' element={<Coins></Coins>}></Route>
         <Route path='/contact' element={<Contact></Contact>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   )
 }
