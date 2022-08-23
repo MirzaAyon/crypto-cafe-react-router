@@ -9,7 +9,12 @@ const Header = () => {
                     Crypto Cafe <span className='text-xl'>☕</span>
                 </Link>
             </div>
-            <div></div>
+            <div className='flex gap-4 text-xl'>
+                <Link to='/'>Home</Link>
+                <Link to='/coins'>Coins</Link>
+                <Link to='/contact'>Contact</Link>
+                <Link to='/about'>About</Link>
+            </div>
         </div>
     );
 };
