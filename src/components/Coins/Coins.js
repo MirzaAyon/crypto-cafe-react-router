@@ -17,6 +17,10 @@ const Coins = () => {
     return (
         <div>
             <h2>Coins are here </h2>
+            <h3>Coins : {coins.length}</h3>
+            {
+                coins.map(coin => <p> {coin.name} </p>)
+            }
         </div>
     );
 };
