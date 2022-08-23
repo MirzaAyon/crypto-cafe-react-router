@@ -10,6 +10,7 @@ const CoinDetails = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data); //eta just dekhar  jnno click korle showing
+                setCoin(data);
             })
         //id ta change hole code ta abr run hbe tai dependancy dbo
         //ekhn id joto bar change hbe uporer code toto bar call hbe 
@@ -19,9 +20,29 @@ const CoinDetails = () => {
             {/* <h2>Coin details</h2> */}
             <div className='h-full grid grid-cols-1 md:grid-cols-2 justify-items-center gap-4 md:justify-items-around content-center'>
                 {/* info div  */}
-                <div></div>
+                <div className='order-2 md:order-1'>
+                    <h1 className='text-3xl'>General Info:</h1>
+                    <hr />
+                    <h1>Coin Name: {coin.name}</h1>
+                    <h1>Market Cap Rank: {coin.market_cap_rank}</h1>
+                    <h1>
+                        Origin:{' '}
+                        {coin.country_origin ? coin.country_origin : 'Not Available'}
+                    </h1>
+                    <h1>Contract Address: {coin.contract_address}</h1>
+                    <h1>Hashing Algorithm: {coin.hashing_algorithm}</h1>
+                    <h1>Genesis Date: {coin.genesis_date}</h1>
+                    <h1>Last Updated: {coin.last_updated}</h1>
+
+                    <h1 className='text-3xl mt-4'>Scores:</h1>
+                    <hr />
+                    <h1>Community Score: {coin.community_score}</h1>
+                    <h1>Developer Score: {coin.developer_score}</h1>
+                    <h1>Liquidity Score: {coin.liquidity_score}</h1>
+                    <h1>Public Interest Score: {coin.public_interest_score}</h1>
+                </div>
                 {/* img div  */}
-                <div></div>
+
             </div>
         </div>
     );
