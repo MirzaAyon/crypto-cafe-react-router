@@ -10,6 +10,7 @@ const CustomLink = ({ to, children, ...props }) => {
     //to er maddhome link
     //childresn er maddhome home,contact,about egula
     //and props er madhdome onno kono props jemon style , classname jodi jaite chai tokhn lagbe 
+    //kono props pathale ta ei props e eshe joma hbe 
     let resolved = useResolvedPath(to);
     let match = useMatch({ path: resolved.pathname, end: true });
     return (
