@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
 
 const Contact = () => {
   return (
@@ -10,12 +10,17 @@ const Contact = () => {
         </h1>
 
         <div className='flex justify-center items-center'>
-          <Link to='bd-address' className='  py-1 px-3 text-white mt-3 mx-1 bg-cyan-600 w-auto sm:mb-0'>
+          <Link to='contact/bd-address' className='  py-1 px-3 text-white mt-3 mx-1 bg-cyan-600 w-auto sm:mb-0'>
             BD Address
           </Link>
-          <Link to='us-address' className='  py-1 px-3 text-white mt-3 mx-1 bg-cyan-600 w-auto sm:mb-0'>
+          <Link to='contact/us-address' className='  py-1 px-3 text-white mt-3 mx-1 bg-cyan-600 w-auto sm:mb-0'>
             US Address
           </Link>
+
+        </div>
+        <div className='flex justify-center items-center w-full py-44'>
+          <Outlet></Outlet>
+
         </div>
       </div>
     </section>
