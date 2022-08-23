@@ -10,10 +10,10 @@ const Header = () => {
                 </CustomLink>
             </div>
             <div className='flex gap-4 text-xl'>
-                <CustomLink to='/'>Home</CustomLink>
-                <CustomLink to='/coins'>Coins</CustomLink>
-                <CustomLink to='/contact'>Contact</CustomLink>
-                <CustomLink to='/about'>About</CustomLink>
+                <CustomLink className="hover:bg-orange-400" to='/'>Home</CustomLink>
+                <CustomLink className="hover:bg-orange-400" to='/coins'>Coins</CustomLink>
+                <CustomLink className="hover:bg-orange-400" to='/contact'>Contact</CustomLink>
+                <CustomLink className="hover:bg-orange-400" to='/about'>About</CustomLink>
             </div>
         </div>
     );
