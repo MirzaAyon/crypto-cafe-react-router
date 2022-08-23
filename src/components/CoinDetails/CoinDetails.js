@@ -42,6 +42,9 @@ const CoinDetails = () => {
                     <h1>Public Interest Score: {coin.public_interest_score}</h1>
                 </div>
                 {/* img div  */}
+                <div className='flex order-1 md:order-2 justify-center items-center'>
+                    <img src={coin.image?.large} alt='coinImg' />
+                </div>
 
             </div>
         </div>
