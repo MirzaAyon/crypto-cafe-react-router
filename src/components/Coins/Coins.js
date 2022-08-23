@@ -7,7 +7,7 @@ const Coins = () => {
         fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=false')
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 setCoins(data)
             })
 
@@ -20,13 +20,18 @@ const Coins = () => {
             {/* <h2>Coins are here </h2>
             <h3>Coins : {coins.length}</h3> */}
             <p className='text-center text-3xl font-bold text-gray'>Available Crypto Currencies</p>
-            {
-                coins.map(coin =>
-                    // <p> {coin.name} </p>
-                    <CoinCard key={coin.id} coin={coin}></CoinCard>
-                    // atr er maddhome pathae dilam okhane props diye dhorbo
-                )
-            }
+            <p className='text-center mb-12 text-xl font-normal text-gray-500 '>
+                Total coins: {coins.length}
+            </p>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 justify-items-center'>
+                {
+                    coins.map(coin =>
+                        // <p> {coin.name} </p>
+                        <CoinCard key={coin.id} coin={coin}></CoinCard>
+                        // atr er maddhome pathae dilam okhane props diye dhorbo
+                    )
+                }
+            </div>
         </div>
     );
 };
