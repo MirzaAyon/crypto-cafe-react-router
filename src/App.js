@@ -9,6 +9,7 @@ import About from './components/About/About'
 import CoinDetails from './components/CoinDetails/CoinDetails'
 import BdAddress from './components/Contact/BdAddress'
 import UsAddress from './components/Contact/UsAddress'
+import NotFound from './components/NotFound/NotFound'
 
 const App = () => {
   return (
@@ -28,6 +29,8 @@ const App = () => {
         </Route>
         {/* kono ekta compo te route nested thakle tar shamne '/'' dewa lage na karon nije nijei jekhan theke ashche sheta chole ashbe  */}
         <Route path='/about' element={<About></About>}></Route>
+        <Route path='*' element={<NotFound></NotFound>} ></Route>
+        {/* ei route ta dite hbe shobar shesh e   */}
 
       </Routes>
       <Footer></Footer>
